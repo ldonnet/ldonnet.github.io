@@ -34,6 +34,8 @@
 .stat-label{
   @include adjust-font-size-to(12px);
   @extend %gray;
+  @extend %ellipsis;
+  display:block;
 }
 
 
