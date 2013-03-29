@@ -66,6 +66,60 @@
     }
   }
   
+ 
+ .btn{
+     font-family: inherit;
+     font-size: 100%;
+     margin: 0;
+     line-height: normal;
+     text-transform: none;
+     -webkit-appearance: none;
+
+     @include position;
+     @include trailer(0);
+     @include adjust-font-size-to(13px);
+     @include rhythm-borders(0px, .75);
+     @include background-clip;
+     @extend .bold;
+     @extend .align-center;
+     //@extend .upper;
+     display:inline-block;
+     border-radius: 4px;
+     cursor: pointer;
+     width: auto;
+     text-decoration: none;
+     text-shadow:none!important;
+     @include button($brand-light);
+     &:hover{
+         text-decoration: none;
+     }
+     &:active{
+
+     }
+     &.small{
+         @include adjust-font-size-to(12px);
+         @include rhythm-borders(0px, .5);
+         padding-left:1em;
+         padding-right:1em;
+     }
+     &.large{
+         @include adjust-font-size-to(16px);
+         @include rhythm-borders(0px, .75);
+         padding-left:1.5em;
+         padding-right:1.5em;
+     }
+     &.big{
+         @include adjust-font-size-to(20px);
+         @include rhythm-borders(0px, .5);
+         padding-left:2.5em;
+         padding-right:2.5em;
+     }
+     &.block{
+         display:block;
+     }
+ }
+
+ [class*="btn"] + [class*="btn"] {margin-left:.5em;}
 
 /*------------------------------------*\
     Helpers

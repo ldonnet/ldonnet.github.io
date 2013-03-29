@@ -29,6 +29,7 @@
   }
 
 .item {
+  padding:0 $base-space/2 $base-space/2 0;
   .content{
     padding:$base-space;
   }
@@ -38,7 +39,7 @@
   }
 
   &:hover .title,
-  .content a{
+  .content a:not(.btn){
     color:$brand-light;
   }
 }
@@ -49,7 +50,7 @@
     border: 1px solid $border-color;
     box-shadow:0 1px 1px rgba(0,0,0,0.05);
     border-radius: 4px;
-    margin:0 $base-space/2 $base-space/2 0;
+    //margin:0 $base-space/2 $base-space/2 0;
     display:block;
     &[data-href]{cursor:pointer;}
   }
@@ -212,14 +213,34 @@
   }
 }
 
-.item--profile--small{
+.item--profile{
+  @include position;
+  @include perspective(800px);
+  z-index:4;
+  &.item--profile--complete{
+    cursor:pointer;
+  }
+  &.flipped .shape{@include transform(rotateY(-180deg));}
   .shape{
     height: 0;
     padding: 0 0 100% 0;
+    @include transform-style(preserve-3d);
+    @include transition(transform 500ms ease-in-out);
   }
+  .item-content{
+      @include backface-visibility(hidden);
+  }
+  .front{
+      z-index:1;
+  }
+  .back{
+    @include transform(rotateY(-180deg));
+    background:$white-color;
+    z-index:2;
+  }
+
   .content{
     @include position(absolute,0px 0 0 0px);
-    padding:0;
     width:100%;
     height:100%;
   }
@@ -229,16 +250,13 @@
     background-repeat:no-repeat;
     background-size:cover;
   }
-  .profile-name{
+  .front .profile-name{
     @include adjust-font-size-to(18px);
     @extend %white;
     @extend %ellipsis;
     @extend .bold;
     padding:$base-space/2;
   }
-}
-.item--profile--complete{
-
 }
   .profile-gradient{
     @include position(absolute,0 0 0px 0px);
@@ -254,12 +272,17 @@
       @include trailer(.5);
   }
 
+  .profil-external{
+      opacity:.25;
+      &:hover{opacity:.5;}
+  }
+
   .profile-picture{
     @include position;
     @include background-clip(padding-box);
     display:block;
-    width:62px;
-    height:62px;
+    width:50px;
+    height:50px;
     border-radius:4px;
     overflow:hidden;
     box-shadow:0 1px 1px rgba(white, 1);
@@ -281,6 +304,8 @@
   }
   .profile-name{
     @include adjust-font-size-to(16px);
+    @include leader(.1);
+    @extend %ellipsis;
     @extend .bold;
     color:$font-color;
   }
@@ -290,17 +315,11 @@
     @extend %ellipsis;
     display:block;
   }
-  .profile-login{
-    @include leader(.25);
-    @extend .profile-meta;
-    &:before{content:"@";}
-  }
   .profile-company{
-    @include leader(.5);
     @extend .profile-meta;
   }
   .list-stat--complete{
-      @include rhythm(0,.25,.25,0);
+      @include rhythm(0,.5,.5,0);
   }
 
 

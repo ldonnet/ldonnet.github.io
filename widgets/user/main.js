@@ -22,6 +22,16 @@ define(['text!./user.html', 'underscore'], function(tpl, _) {
         user: user,
         style: this.options.style
       }));
+      this.sandbox.dom.attachEvents(this.events, this);
+    },
+
+
+    events: {
+      'click .item': function(e) {
+        if(!$(e.target).is('a') && this.options.style === 'complete'){
+          $(e.currentTarget).toggleClass('flipped');
+        }
+      }
     }
   };
 
