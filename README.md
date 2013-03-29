@@ -5,6 +5,7 @@ It uses [AuraJS](https://github.com/aurajs/aura) and an [aura-github](https://gi
 * [user](https://github.com/hull/hull.github.com/blob/master/widgets/user/main.js) to load and display a user's profile. (In our case, [hull's organization](https://github.com/hull))
 * [repos](https://github.com/hull/hull.github.com/blob/master/widgets/repos/main.js) to load and display a list of repos.
 
+If you want to know more how it was done, read [the blog post](http://blog.hull.io/post/46504817377/how-to-build-your-own-twitter-like-open-source-page).
 
 ## Using on your own github homepage
 
