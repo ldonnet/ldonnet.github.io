@@ -38,6 +38,7 @@ If you want to know more how it was done, read [the blog post](http://blog.hull.
 
 [More about github pages](https://github.com/blog/272-github-pages)
 
+
 ## Using locally
 
 Install [node.js](http://nodejs.org) **(Only used for developing the app locally, not needed for deployment)**
@@ -63,6 +64,16 @@ Open in your browser
 
     open http://localhost:3010
 
+## Options
+
+### User widget
+
+* `style`: Optional, could be **small** or **complete** depending on what do you want to show.
+
+##### Example:
+
+    <ul data-aura-widget="repos" data-aura-style="complete" data-aura-user="victa"></ul>
+        
 ## Next steps
 
 Here are a few ideas for further improvement :
