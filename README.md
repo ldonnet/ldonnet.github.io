@@ -9,11 +9,11 @@ If you want to know more how it was done, read [the blog post](http://blog.hull.
 
 ## Using on your own github homepage
 
-1. First, clone this repository :
+1. First, clone this repository (or fork it directly on Github) :
 
         git clone git://github.com/hull/hull.github.com.git
 
-2. Create a repository named ``you.github.com``, where ``you`` is your username
+2. Create a repository named ``you.github.com``, where ``you`` is your username (If you have fork the repository, don't forget to rename it!)
 
 3. Whitelist your domain on your github applications settings [https://github.com/settings/applications](https://github.com/settings/applications)
 
