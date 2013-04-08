@@ -1,9 +1,9 @@
 This app is a showcase of Github projects for an organization or a user, all in Javascript.
 
-It uses [AuraJS](https://github.com/aurajs/aura) and an [aura-github](https://github.com/hull/hull.github.com/blob/master/assets/js/extensions/aura-github.js) extension that allows our Widgets to talk directly to Github's API, and [2 Aura widgets](https://github.com/hull/hull.github.com/tree/master/widgets) : 
+It uses [AuraJS](https://github.com/aurajs/aura) and an [aura-github](https://github.com/hull/hull.github.io/blob/master/assets/js/extensions/aura-github.js) extension that allows our Widgets to talk directly to Github's API, and [2 Aura widgets](https://github.com/hull/hull.github.io/tree/master/widgets) : 
 
-* [user](https://github.com/hull/hull.github.com/blob/master/widgets/user/main.js) to load and display a user's profile. (In our case, [hull's organization](https://github.com/hull))
-* [repos](https://github.com/hull/hull.github.com/blob/master/widgets/repos/main.js) to load and display a list of repos.
+* [user](https://github.com/hull/hull.github.io/blob/master/widgets/user/main.js) to load and display a user's profile. (In our case, [hull's organization](https://github.com/hull))
+* [repos](https://github.com/hull/hull.github.io/blob/master/widgets/repos/main.js) to load and display a list of repos.
 
 If you want to know more how it was done, read [the blog post](http://blog.hull.io/post/46504817377/how-to-build-your-own-twitter-like-open-source-page).
 
@@ -11,15 +11,15 @@ If you want to know more how it was done, read [the blog post](http://blog.hull.
 
 1. First, clone this repository (or fork it directly on Github) :
 
-        git clone git://github.com/hull/hull.github.com.git
+        git clone git://github.com/hull/hull.github.io.git
 
-2. Create a repository named ``you.github.com``, where ``you`` is your username (If you have fork the repository, don't forget to rename it!)
+2. Create a repository named ``you.github.io``, where ``you`` is your username (If you have fork the repository, don't forget to rename it!)
 
 3. Whitelist your domain on your github applications settings [https://github.com/settings/applications](https://github.com/settings/applications)
 
    Click on **Register a new application**
    
-   Fill **Main URL** and **Callback URL** with your github homepage url. (i.e. ``http://you.github.com``)
+   Fill **Main URL** and **Callback URL** with your github homepage url. (i.e. ``http://you.github.io``)
 
 4. Configure ```index.html``` with the correct settings.
 
@@ -49,7 +49,7 @@ Install [grunt-cli](https://github.com/gruntjs/grunt-cli) as a global module.
 
 then install grunt and it's modules in the project's folder.
 
-    cd hull.github.com
+    cd hull.github.io
     npm install
 
 
