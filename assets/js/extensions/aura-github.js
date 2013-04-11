@@ -8,11 +8,11 @@ define({
         data = JSON.stringify(data);
       }
       
-      var headers = {};
+      var headers = {
+        Accept: 'application/json'
+      };
       if (token) {
-        headers = {
-          "Authorization": "token " + token
-        };
+        headers.Authorization = "token " + token;
       }
       $.ajax({
         type: verb,
